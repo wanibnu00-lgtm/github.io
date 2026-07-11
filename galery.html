@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momen Kita - Galeri</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-image: url('https://i.pinimg.com/736x/4c/ee/eb/4ceeebd0593d22300e8fbdb3e69b17ea.jpg'); background-size: cover; background-position: center; background-attachment: fixed; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; color: #5c4033; }
+        .container { max-width: 450px; width: 100%; display: flex; flex-direction: column; gap: 20px; }
+        .nav-menu { display: flex; justify-content: space-around; background: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 50px; border: 2px solid #ffcc00; font-weight: bold; }
+        .nav-menu a { text-decoration: none; color: #ffa500; padding: 5px 15px; border-radius: 20px; }
+        .nav-menu a.active { background: #ffa500; color: white; }
+        .card { background: rgba(255, 255, 255, 0.95); border: 3px solid #ffcc00; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; box-sizing: border-box; }
+        .photo-gallery img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 2px solid #ffe066; display: block; }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" autoplay loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="nav-menu">
+            <a href="index.html">Utama</a>
+            <a href="galeri.html" class="active">Galeri</a>
+            <a href="surat.html">Surat</a>
+        </div>
+
+        <div class="card photo-gallery">
+            <h3>Momen Kita 📸</h3>
+            <img src="foto1.jpg" alt="Foto Kenangan 1">
+            <img src="foto2.jpg" alt="Foto Kenangan 2">
+            <img src="foto3.jpg" alt="Foto Kenangan 3">
+            <img src="foto4.jpg" alt="Foto Kenangan 4">
+            <img src="foto5.jpg" alt="Foto Kenangan 5">
+            <img src="foto6.jpg" alt="Foto Kenangan 6">
+            <p>Mau membukanya? *⁠(⁠(⁠*⁠^⁠ω⁠^⁠*⁠)⁠)⁠*</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('click', function() { document.getElementById('bgMusic').play(); }, { once: true });
+        window.addEventListener('touchstart', function() { document.getElementById('bgMusic').play(); }, { once: true });
+    </script>
+</body>
+</html>
+
