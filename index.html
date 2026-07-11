@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Juraaaa</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-image: url('https://i.pinimg.com/736x/4c/ee/eb/4ceeebd0593d22300e8fbdb3e69b17ea.jpg'); background-size: cover; background-position: center; background-attachment: fixed; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; color: #5c4033; }
+        .container { max-width: 450px; width: 100%; display: flex; flex-direction: column; gap: 20px; }
+        .nav-menu { display: flex; justify-content: space-around; background: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 50px; border: 2px solid #ffcc00; font-weight: bold; }
+        .nav-menu a { text-decoration: none; color: #ffa500; padding: 5px 15px; border-radius: 20px; }
+        .nav-menu a.active { background: #ffa500; color: white; }
+        .card { background: rgba(255, 255, 255, 0.95); border: 3px solid #ffcc00; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; }
+        h1 { color: #e6b800; margin-top: 10px; }
+        .character-img { width: 150px; height: auto; margin: 10px auto; border-radius: 10px; }
+        .btn { background-color: #ffa500; color: white; border: none; padding: 12px 28px; font-weight: bold; border-radius: 50px; cursor: pointer; margin-top: 10px; }
+        .hidden-message { display: none; background: #fffdf3; border-left: 5px solid #ffa500; padding: 15px; text-align: left; border-radius: 0 15px 15px 0; margin-top: 15px; }
+        .music-status { font-size: 11px; color: #a87e43; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <!-- Audio Tag dengan properti autoplay & loop -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="nav-menu">
+            <a href="index.html" class="active">Utama</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="surat.html">Surat</a>
+        </div>
+
+        <div class="card">
+            <img class="character-img" src="pompom.jpg" alt="Foto Utama">
+            <h1>Selamat Ulang Tahun</h1>
+            <p style="font-weight: bold; font-size: 16px;"> (｡♥‿♥｡)</p>
+            <p>Klik tombol di bawah ini buat kejutan kecil selanjutnya! </p>
+            <button class="btn" onclick="tampilkanPesan()">Lanjut!! ^w^</button>
+            <div id="pesanKejutan" class="hidden-message">
+                <p>✨ Awh... Terima kasih sudah klik! jan.gan kaget ntar yak muehehhee Sekarang coba klik menu <b>Galeri</b> atau <b>Surat</b> di atas ya! 👇</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <span style="font-size: 24px;">🎵</span>
+            <p><i>Ini lagu yang selalu mengingatkanku padamu...</i></p>
+            <p class="music-status">🎶 Lagunya otomatis muter, sentuh layar kalau belum bunyi prenk</p>
+            <p style="font-size: 13px; color: #777;">Setiap kali mendengar lagu ini, gua selalu keinget ama lu .prenkk </p>
+        </div>
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            var pesan = document.getElementById("pesanKejutan");
+            pesan.style.display = (pesan.style.display === "none" || pesan.style.display === "") ? "block" : "none";
+        }
+
+        // Trik Autoplay Mobile: Play saat user pertama kali menyentuh layar
+        window.addEventListener('click', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+        
+        window.addEventListener('touchstart', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
+
