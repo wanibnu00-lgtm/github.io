@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surat Cinta Jura</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-image: url('https://i.pinimg.com/736x/8f/c9/28/8fc9285090bc1b9794eb88c9bb75e9b8.jpg'); background-size: cover; background-position: center; background-attachment: fixed; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; color: #5c4033; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-image: url('bg.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            color: #5c4033; 
+        }
         .container { max-width: 450px; width: 100%; display: flex; flex-direction: column; gap: 20px; }
         .nav-menu { display: flex; justify-content: space-around; background: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 50px; border: 2px solid #ffcc00; font-weight: bold; }
         .nav-menu a { text-decoration: none; color: #ffa500; padding: 5px 15px; border-radius: 20px; }
         .nav-menu a.active { background: #ffa500; color: white; }
-        .card { background: rgba(255, 255, 255, 0.95); border: 3px solid #ffcc00; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; }
+        .card { background: rgba(255, 255, 255, 0.85); border: 3px solid #ffcc00; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; }
         .envelope { background: #fff3cd; border: 2px dashed #ffa500; padding: 30px; border-radius: 15px; cursor: pointer; font-weight: bold; color: #d48800; }
         .hidden-message { display: none; background: #fffdf3; border-left: 5px solid #ffa500; padding: 15px; text-align: left; border-radius: 0 15px 15px 0; margin-top: 15px; }
         p { line-height: 1.6; font-size: 14px; }
@@ -47,9 +59,9 @@
             var surat = document.getElementById("isiSurat");
             surat.style.display = (surat.style.display === "none" || surat.style.display === "") ? "block" : "none";
         }
-        
         window.addEventListener('click', function() { document.getElementById('bgMusic').play(); }, { once: true });
         window.addEventListener('touchstart', function() { document.getElementById('bgMusic').play(); }, { once: true });
+        window.addEventListener('scroll', function() { document.getElementById('bgMusic').play(); }, { once: true });
     </script>
 </body>
 </html>
